@@ -24,3 +24,7 @@ Route.group(() => {
   Route.post('/', 'UsersController.create')
   Route.post('/auth', 'UsersController.auth')
 }).prefix('/v1/users')
+
+Route.group(() => {
+  Route.post('/', 'StoresController.create')
+}).prefix('/v1/stores')
