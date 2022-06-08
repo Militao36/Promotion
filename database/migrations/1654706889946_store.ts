@@ -17,6 +17,7 @@ export default class extends BaseSchema {
       table.string('estado', 50).notNullable()
       table.string('cep', 10).notNullable()
       table.string('logo').notNullable()
+      table.integer('user_id').unsigned().references('id').inTable('users')
       /**
        * Uses timestamptz for PostgreSQL and DATETIME2 for MSSQL
        */
